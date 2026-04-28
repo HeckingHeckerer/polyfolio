@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'glb_loader_screen.dart';
-import 'obj_loader_screen.dart';
 
 void main() {
   runApp(const PolyFolioApp());
@@ -34,20 +33,12 @@ class HomeScreen extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const GlbLoaderScreen(),
+                  builder: (context) => const GlbLoaderScreen(
+                    src: 'assets/3d/ford_mustang_cobra_jet.glb',
+                  ),
                 ),
               ),
               child: const Text('Load GLB/GLTF (with Controller)'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ObjLoaderScreen(),
-                ),
-              ),
-              child: const Text('Load OBJ Model'),
             ),
           ],
         ),
