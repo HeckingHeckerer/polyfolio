@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
 import '../../models/model_3d.dart';
+import '../../data/download_button.dart'; // Import the DownloadButton
+import '../../data/ratings_section.dart';
+import '../../data/comments_section.dart';
 
 class ModelDetailScreen extends StatefulWidget {
   final Model3D model;
@@ -203,6 +206,18 @@ class _ModelDetailScreenState extends State<ModelDetailScreen> {
                 ],
               ),
             ),
+            // Missing Sections Added Below
+            const Divider(color: Colors.white12, height: 1),
+            Container(
+              color: Colors.white,
+              child: RatingsSection(model: widget.model),
+            ),
+            const Divider(color: Colors.white12, height: 1),
+            Container(
+              color: Colors.white,
+              child: CommentsSection(modelId: widget.model.id),
+            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),

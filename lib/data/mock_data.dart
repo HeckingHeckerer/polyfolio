@@ -136,3 +136,81 @@ final List<String> mockTags = [
   'animated',
   'fantasy',
 ];
+
+// Append to the bottom of lib/data/mock_data.dart
+
+class MockComment {
+  final String id;
+  final String username;
+  final String text;
+  final DateTime timestamp;
+
+  const MockComment({
+    required this.id,
+    required this.username,
+    required this.text,
+    required this.timestamp,
+  });
+}
+
+final Map<String, List<MockComment>> mockComments = {
+  '1': [
+    MockComment(
+      id: 'c1',
+      username: 'poly_grove',
+      text: 'Incredible detail on the shoulder plates!',
+      timestamp: DateTime(2025, 3, 12),
+    ),
+    MockComment(
+      id: 'c2',
+      username: 'neon_forge',
+      text: 'What software did you use to sculpt this?',
+      timestamp: DateTime(2025, 3, 14),
+    ),
+    MockComment(
+      id: 'c3',
+      username: 'terra_sculpt',
+      text: 'The topology is very clean, great work.',
+      timestamp: DateTime(2025, 3, 20),
+    ),
+  ],
+  '2': [
+    MockComment(
+      id: 'c4',
+      username: 'kagenobu',
+      text: 'Perfect for my FPS project!',
+      timestamp: DateTime(2025, 4, 3),
+    ),
+  ],
+  '3': [
+    MockComment(
+      id: 'c5',
+      username: 'mech_works',
+      text: 'The overgrowth texture is stunning.',
+      timestamp: DateTime(2025, 2, 1),
+    ),
+    MockComment(
+      id: 'c6',
+      username: 'elven_blade',
+      text: 'Would love a day/night version of this.',
+      timestamp: DateTime(2025, 2, 10),
+    ),
+  ],
+  '4': [],
+  '5': [],
+  '6': [],
+};
+
+// Mock current user — swap with real auth later
+const mockCurrentUsername = 'demo_user';
+const mockCurrentUserRole = 'user'; // 'guest', 'user', or 'admin'
+
+// null = not yet rated, 'like' or 'dislike' = rated
+final Map<String, String?> mockUserRatings = {
+  '1': null,
+  '2': 'like',
+  '3': null,
+  '4': null,
+  '5': null,
+  '6': null,
+};
