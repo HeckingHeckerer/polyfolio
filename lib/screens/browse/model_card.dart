@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../models/model_3d.dart';
-import '../../detail/model_detail_screen.dart';
+import 'model_detail_screen.dart';
 
 class ModelCard extends StatelessWidget {
   final Model3D model;

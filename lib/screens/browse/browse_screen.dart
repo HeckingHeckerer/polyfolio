@@ -1,8 +1,8 @@
 // lib/screens/browse/browse_screen.dart
 
 import 'package:flutter/material.dart';
-import '../../../../data/mock_data.dart';
-import '../../../../models/model_3d.dart';
+import '../../data/mock_data.dart';
+import '../../models/model_3d.dart';
 import '../../widgets/model_card.dart';
 import '../../widgets/tag_filter_bar.dart';
 

@@ -1,8 +1,8 @@
 // lib/screens/browse/widgets/model_card.dart
 
 import 'package:flutter/material.dart';
-import '../../../models/model_3d.dart';
-import '../../detail/model_detail_screen.dart';
+import '../models/model_3d.dart';
+import '../screens/browse/model_detail_screen.dart';
 
 class ModelCard extends StatelessWidget {
   final Model3D model;
@@ -49,7 +49,7 @@ class ModelCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 4),
               child: Text(
-                '${_formatNumber(model.polygonCount)} polys  •  ${model.fileFormat}',
+                '${_formatNumber(model.totalTriangleCount)} tris  •  ${model.fileFormat}',
                 style: TextStyle(fontSize: 11, color: Colors.grey[500]),
               ),
             ),
